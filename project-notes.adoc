@@ -49,4 +49,6 @@ In Firefox:
 . In the Inspector panel, right-click the HTML node > Copy > Outer HTML.
 . Open a text-editor file and paste in the clipboard text.
 
+image::images/copying-asciidoctorjs-html.png[]
+
 
