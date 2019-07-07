@@ -1,0 +1,5 @@
+= Second AsciiDoc document
+
+This is optional preamble text that introduces the document.
+
+You will notice that just typing a line of text creates a paragraph in AsciiDoc. This is a second sentence in the paragraph.

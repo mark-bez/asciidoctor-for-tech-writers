@@ -1,0 +1,23 @@
+= How to make a quesadilla
+
+== Introduction
+A quesadilla is an easy-to-make snack that toddlers (and grown-ups) love.
+
+
+== Ingredients
+Before starting to make your quesadilla, gather the following ingredients.
+
+* A flour tortilla
+* A melting cheese, grated
+* Butter
+
+== Steps
+
+. Heat a flat cast-iron pan on a medium setting
+. Add a knob of butter to the pan and, with your hand, use the tortilla to spread it around.
+. Sprinkle some grated cheese onto one half of the tortilla.
+. Fold the tortilla over and heat until the underside is browned.
+. Flip the tortilla over and brown on the other side.
+. Remove from the pan and eat your quesadilla.
+
+image::https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Quesadilla_2.jpg/1024px-Quesadilla_2.jpg[width="50%"]

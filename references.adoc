@@ -1,0 +1,24 @@
+= References
+
+https://asciidoctor.org/docs/what-is-asciidoc/[Official - reason to use]
+
+https://www.bryanklein.com/blog/hugo-asciidoctor-vscode-gitlab-firebase/[Hugo with AsciiDoc]
+
+https://gist.github.com/briandominick/e5754cc8438dd9503d936ef65fffbb2d[Static site generators with AsciiDoc support]
+
+https://tedbergeron.github.io/2015/08/16/How-to-build-a-website-with-Asciidoctor.html[Building a website with AsciiDoctor]
+
+http://asciidoc.org/#X2[List of useful references from the official AsciiDoc site]
+
+http://gist.asciidoctor.org/[AsciiDoc gists]
+
+https://asciidoclive.com[Live demo]
+
+http://espadrine.github.io/AsciiDocBox/[Live demo]
+
+* http://tomswan.com/blog/posts/top-ten-asciidoctor-tips.html[]
+*
+* https://www.vogella.com/tutorials/AsciiDoc/article.html[vogella]
+*
+* https://staticsitegenerators.net/[List of static site generators]
+
