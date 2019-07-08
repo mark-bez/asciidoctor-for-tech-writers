@@ -1,0 +1,42 @@
+= Writing a simple document
+:toc:
+
+We'll start with a simple document written with the simplest of tools.
+
+== What you'll need
+
+To write the AsciiDoc we'll use a basic text editor.
+The examples below show Windows Notepad, but if you work on a Mac you might use TextEdit.
+
+To show what the HTML created from the AsciiDoc document looks like, we'll use either Chrome, Firefox, or Opera browser with an installed extension called Asciidoctor.js Live Preview.
+
+== How to do it
+
+. Download preview extension for Chrome or Firefox.
+
+
+In Chrome:
+. Type `chrome://extensions/` to open the Extensions page.
+. Click the settings menu
++
+image::images/chrome-extension-1.png[]
+
+.
+
+
+. Need to set the requirement in Chrome "Allow access to file urls"
+. Open Notepad in Windows or EditPad in Apple
+*** Re-create example-1.adoc
+** What can you do with this?
+*** Copy the entire text from the browser and paste it into an email. Nicely formatted. Can adjust the formatting.
+
+
+Narrated screen video showing how to start a document with just a heading1 and open it in live preview.
+
+////
+
+* Writing a simple document in the simplest way
+** Use https://asciidoclive.com[] or http://espadrine.github.io/AsciiDocBox/[] for a live demo maybe
+** Recreate an article from Wikipedia in a simple text editor
+
+////
