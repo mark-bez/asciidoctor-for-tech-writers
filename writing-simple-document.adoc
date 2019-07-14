@@ -1,24 +1,31 @@
 = Writing a simple document
-
-We'll start by writing a simple document using the easiest method for creating an AsciiDoc file directly on your computer.
+We'll start by writing a simple document.
 
 == What you'll need
-To follow along you'll need a basic text editor and a browser with an installed extension for viewing the nicely formatted result.
+For this example you'll need:
+
+* A basic text editor
+* Either the Chrome, Firefox, or Opera browser
 
 === The text editor
-You can use any text editor, but the example screenshots use the default editor -- Windows Notepad.
+You can write AsciiDoc using any text editor.
+On a Mac you can use TextEdit, the default text editor.
+On Windows, the equivalent is Windows Notepad.
 
 image::images/windows-notepad.png[width=50%]
 
-Windows Notepad used to be a bad option because it didn't handle cross-platform line endings, but that is now fixed.
+Windows Notepad link:#aside[is not the best option] for writing documents in general, but it's fine for this example and you'll see it used in the screenshots below.
 
-If you work on a Mac TextEdit would be the equivalent.
 
-=== The browser extension
-To show what the HTML created from the AsciiDoc document looks like as you write, you can use the Chrome or Firefox browser with an installed extension called Asciidoctor.js Live Preview.
-Actually Opera also supports the AsciiDoctor extension, but I'm just giving instructions for the big two.
+=== The browser
+To write a document in AsciiDoc you only need a text editor.
+However, when you're starting out it helps to get immediate feedback about what the document looks like as HTML.
 
-*To install the extension for Chrome:*
+For this we'll use either the Chrome or Firefox browser with an installed extension called *Asciidoctor.js Live Preview*.
+Actually, Opera also supports this extension, but I'm just giving instructions for the big two.
+
+[.procedure-intro]
+To install the extension for Chrome:
 
 . Open Chrome and in the navigation bar type `chrome://extensions/` to open the Extensions page.
 . Click the settings menu
@@ -27,27 +34,70 @@ image::images/chrome-extension-1.png[]
 
 . Need to set the requirement in Chrome "Allow access to file urls"
 
+Note the icon in the toolbar.
+Clicking the icon toggles the extension on and off.
+
+[.procedure-intro]
+To install the extension for Firefox:
+
+. One
+. Two
+
+Note the icon in the toolbar.
+Clicking the icon toggles the extension on and off.
+
 == Writing the document
-I'm going to create a document for a simple recipe, but you can of course substitute with your own text.
+This first example shows how to write a document containing a recipe, but you can of course follow the general idea while writing about whatever subject interests you.
 
-=== The first few paragraphs
-
-. Open your text editor.
-. On the very top line, type:
+=== The first few lines
+. Open your text editor and type the following:
 +
 image::images/quesadilla-1.png[]
 +
-This is the document title, also known as the first-level heading, level-one heading, or h1 heading (in HTML speak).
+This line forms the document title.
 
-. Leave a blank row underneath and type a level 2 heading followed by a paragraph:
+. Following the example in the screenshot below, leave a blank line then type a sub-heading and a paragraph.
 +
 image::images/quesadilla-2.png[]
 
-You can see already is that the heading level is denoted by the number of equal signs.
-For the heading to be recognized, the leftmost equal sign must be against the left edge of the document and there must be a space before the heading text.
+. Save the file, with a name and an extension of `.adoc` such as `quesadilla-recipe.adoc`.
++
+You can also use the extension `.asciidoc`, but as it's more characters to type there's little point.
 
-The h1 heading is the only one that needs a blank line underneath.
-That's because the line underneath is reserved for optional document attributes, which we'll cover later.
+. Open your browser with the *Asciidoctor.js Live Preview* extension.
+. Open the AsciiDoc file in the browser by either:
+* Dragging the file into the browser window.
+* Right-clicking the file and using an open command.
+* Showing the browser top level menu and using File > Open.
+
+You should now be able to see your recipe document rendered as HTML in the browser.
+
+image::images/quesadilla-rendered-1.png[]
+
+=== Debrief
+There's a lot to learn from just this brief example.
+You can see that:
+
+* Marking up the start of a line with one or more equals signs denotes a heading
+* The number of equals signs denotes the heading level
+* Plain text without any markup makes a paragraph.
+
+=== Some rules
+With a little experimentation we can discover some syntax rules that are important to know.
+
+==== The leftmost equal sign must lie against the left edge of the document.
+
+
+* There must be at least one space after the rightmost equals sign and before the heading text.
++
+It's a good idea to only use one space before the text because some text editors that use syntax  highlighting won't highlight the heading if there is more than one space.
+More about that later.
+
+The h1 heading is actually optional.
+You could start the document with a text paragraph.
+This is the only heading that needs a blank line below it.
+That's because lines immediately underneath the h1 heading are reserved for optional document attributes, which we'll cover later.
+A blank line is needed to let processors know when the body of the document starts.
 
 The second-level heading with the two equal signs has a line of text immediately below it.
 
@@ -58,6 +108,8 @@ There is another way to denote the first couple of heading levels, but for now w
 
 Text written without any markup is a simple text paragraph.
 
+* The h1 heading must have a blank line underneath. rewrite to the body must have a blank line above - this is clearer.
+*
 Let's continue with the document.
 
 === Viewing the result in a browser
@@ -67,6 +119,22 @@ Let's continue with the document.
 
 Start a new paragraph by
 
+
+[#aside]
+== Aside
+Windows Notepad is generally a poor choice for writing text documents because except for the latest version that most people don't have, its files are incompatible with other operating systems.
+However, it works well for our purposes here.
+
+The AsciiDoc specification names the headings as follows:
+
+----
+= Document Title (level 0) (h1)
+== Section title (level 1) (h2)
+=== Section title (level 2)
+==== Section title (level 3)
+----
+
+However, somewhat confusingly, these correspond to
 
 
 
