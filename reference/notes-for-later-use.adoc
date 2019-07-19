@@ -5,3 +5,23 @@ Add this to my asciidoc notes files
 
 INPUT_ADOC=my_input_file.adoc
 asciidoctor --backend docbook --out-file - $INPUT_ADOC|pandoc --from docbook --to docx --output $INPUT_ADOC.docx
+
+== Document structure
+The high level structure is:
+
+* Header
+** Title
+** Document attributes
+**
+* Section 1
+** Section 1 title
+** Section 1 body
+* Section 2
+** Section 2 title
+** Section 2 body, and so on
+
+The blank line is needed
+
+
+If you have heading levels out of order, say a heading 3 without a heading 2 above it, you can still create an output, but AsciiDoc processors will warn you that you have the structure out of sequence.
+This is a great thing because it doesn't hold up your work, but still helps you write your document with a logically correct structure.

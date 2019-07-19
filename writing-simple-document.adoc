@@ -1,28 +1,23 @@
 = Writing a simple document
-We'll start by writing a simple document.
+:toc:
+:toclevels: 4
 
-== What you'll need
-For this example you'll need:
+This article shows you how to use AsciiDoc to write a simple document in a text editor and view it as HTML.
 
-* A basic text editor
-* Either the Chrome, Firefox, or Opera browser
+== The tools
+
 
 === The text editor
-You can write AsciiDoc using any text editor.
-On a Mac you can use TextEdit, the default text editor.
-On Windows, the equivalent is Windows Notepad.
-
-image::images/windows-notepad.png[width=50%]
-
+You can use any text editor to write a document in AsciiDoc, but to keep things simple we'll use your operating system's default editor.
+On a Mac this is TextEdit and on Windows it is Notepad.
 Windows Notepad link:#aside[is not the best option] for writing documents in general, but it's fine for this example and you'll see it used in the screenshots below.
 
+// image::images/windows-notepad.png[width=50%]
 
 === The browser
 To write a document in AsciiDoc you only need a text editor.
-However, when you're starting out it helps to get immediate feedback about what the document looks like as HTML.
-
-For this we'll use either the Chrome or Firefox browser with an installed extension called *Asciidoctor.js Live Preview*.
-Actually, Opera also supports this extension, but I'm just giving instructions for the big two.
+However, it does help as you write to see what the document looks like as nicely styled HTML.
+To view the HTML we'll use either the Chrome, Firefox, or Opera browser, which all support a extension called *Asciidoctor.js Live Preview*.
 
 [.procedure-intro]
 To install the extension for Chrome:
@@ -47,77 +42,90 @@ Note the icon in the toolbar.
 Clicking the icon toggles the extension on and off.
 
 == Writing the document
-This first example shows how to write a document containing a recipe, but you can of course follow the general idea while writing about whatever subject interests you.
+This first example is for a recipe, but you can of course follow the general idea while writing about whatever subject interests you.
 
 === The first few lines
 . Open your text editor and type the following:
 +
 image::images/quesadilla-1.png[]
 +
-This line forms the document title.
+You just typed the document title, which becomes the h1 heading when converted to HTML.
 
-. Following the example in the screenshot below, leave a blank line then type a sub-heading and a paragraph.
+. Leave a blank line then type a sub-heading and a paragraph following the example in the screenshot below.
 +
 image::images/quesadilla-2.png[]
 
-. Save the file, with a name and an extension of `.adoc` such as `quesadilla-recipe.adoc`.
+. Save the file, giving it a name and the extension `.adoc`, such as `quesadilla-recipe.adoc`.
 +
-You can also use the extension `.asciidoc`, but as it's more characters to type there's little point.
+You can also use the extension `.asciidoc`, but why type more characters.
 
-. Open your browser with the *Asciidoctor.js Live Preview* extension.
-. Open the AsciiDoc file in the browser by either:
-* Dragging the file into the browser window.
-* Right-clicking the file and using an open command.
-* Showing the browser top level menu and using File > Open.
+. Open your browser.
+. Open the AsciiDoc file in the browser by dragging the file into the browser window.
 
 You should now be able to see your recipe document rendered as HTML in the browser.
 
 image::images/quesadilla-rendered-1.png[]
 
 === Debrief
-There's a lot to learn from just this brief example.
-You can see that:
+There's a lot to learn from this brief example.
 
-* Marking up the start of a line with one or more equals signs denotes a heading
-* The number of equals signs denotes the heading level
-* Plain text without any markup makes a paragraph.
-
-=== Some rules
-With a little experimentation we can discover some syntax rules that are important to know.
-
-==== The leftmost equal sign must lie against the left edge of the document.
-
-
-* There must be at least one space after the rightmost equals sign and before the heading text.
+==== What you've learned
+* Marking up the start of a line with one or more equals signs denotes a heading.
+* The number of equals signs denotes the heading level when converted to HTML:
 +
-It's a good idea to only use one space before the text because some text editors that use syntax  highlighting won't highlight the heading if there is more than one space.
+....
+= becomes <h1>
+== becomes <h2>
+=== becomes <h3>, and so on
+....
+
+* A paragraph of plain text without any markup makes a paragraph.
+
+==== Some syntax rules
+There are a couple of syntax rules that are important to know when writing headings.
+
+* The leftmost equals sign for a heading must lie against the left edge of the document or you'll get an indented block instead like this:
++
+image::images/quesadilla-syntax-1.png[]
+
+* There must be at least one space in front of the title text to avoid the equals signs being treated as literal characters like this:
++
+image::images/quesadilla-syntax-2.png[]
++
+Using only one space between the equals sign and text is preferred because text editors using syntax highlighting may otherwise not highlight the heading.
 More about that later.
 
-The h1 heading is actually optional.
-You could start the document with a text paragraph.
-This is the only heading that needs a blank line below it.
-That's because lines immediately underneath the h1 heading are reserved for optional document attributes, which we'll cover later.
-A blank line is needed to let processors know when the body of the document starts.
+==== Additional detail
+The document title is actually optional, so you could begin the document with a text paragraph.
+You might do this, for example, when creating a document fragment that you'll later merge with another document fragment.
 
-The second-level heading with the two equal signs has a line of text immediately below it.
+If you remember, we needed to leave a blank line immediately below the document title.
+This is because AsciiDoc documents comprise a document header followed by a document body.
+The document header contains the document title followed by optional document attributes.
+The document body contains a series of sections, each of which starts with a title.
 
-If you have heading levels out of order, say a heading 3 without a heading 2 above it, you can still create an output, but AsciiDoc processors will warn you that you have the structure out of sequence.
-This is a great thing because it doesn't hold up your work, but still helps you write your document with a logically correct structure.
+// image of a document with a header, blank line, and body
 
-There is another way to denote the first couple of heading levels, but for now we'll just use the equal signs.
+A blank line is needed to tell software processors where the header ends and the body starts.
+We'll cover this in more detail later.
 
-Text written without any markup is a simple text paragraph.
+There is another way to denote the heading levels, but using the equal signs is the preferred method.
 
-* The h1 heading must have a blank line underneath. rewrite to the body must have a blank line above - this is clearer.
-*
 Let's continue with the document.
 
-=== Viewing the result in a browser
 
 
 === Adding lists
 
 Start a new paragraph by
+
+=== Debrief
+
+==== What you've learned
+
+==== Some syntax rules
+
+==== Additional detail
 
 
 [#aside]
@@ -135,8 +143,6 @@ The AsciiDoc specification names the headings as follows:
 ----
 
 However, somewhat confusingly, these correspond to
-
-
 
 
 
